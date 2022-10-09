@@ -8,7 +8,7 @@ class Minimum {
     {
 
         if (high < low)
-            return arr[0];
+            return arr[1];
 
 
         if (high == low)
