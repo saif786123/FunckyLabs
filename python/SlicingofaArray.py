@@ -1,32 +1,29 @@
-# Python program to demonstrate
-# slicing of elements in a Array
+# Python code to demonstrate
+# how to update an element in array
 
 # importing array module
-import array as arr
+import array
 
-# creating a list
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# initializing array with array values
+# initializes array with signed integers
+arr = array.array('i', [1, 2, 3, 1, 2, 5])
 
-a = arr.array('i', l)
-print("Initial Array: ")
-for i in (a):
-	print(i, end =" ")
+# printing original array
+print ("Array before updation : ", end ="")
+for i in range (0, 6):
+	print (arr[i], end =" ")
 
-# Print elements of a range
-# using Slice operation
-Sliced_array = a[3:8]
-print("\nSlicing elements in a range 3-8: ")
-print(Sliced_array)
+print ("\r")
 
-# Print elements from a
-# pre-defined point to end
-Sliced_array = a[5:]
-print("\nElements sliced from 5th "
-	"element till the end: ")
-print(Sliced_array)
+# updating a element in a array
+arr[2] = 6
+print("Array after updation : ", end ="")
+for i in range (0, 6):
+	print (arr[i], end =" ")
+print()
 
-# Printing elements from
-# beginning till end
-Sliced_array = a[:]
-print("\nPrinting all elements using slice operation: ")
-print(Sliced_array)
+# updating a element in a array
+arr[4] = 8
+print("Array after updation : ", end ="")
+for i in range (0, 6):
+	print (arr[i], end =" ")
