@@ -1,16 +1,42 @@
-def rearrange(arr):
-    p = 0
-    b = 0
-    for i in range(len(arr)):
-        if b == 1:
-            b -= 1
-        elif arr[i] < 0:
-            arr[i], arr[p] = arr[p], arr[i]
-            if p > i:
-                b += 1
-            p += 2
-    return arr
+# Python program for traversal of a linked list
+# Node class
 
 
-array = [2, 3, -4, -1, 6, -9]
-print("After Rearranging :", rearrange(array))
+class Node:
+
+	# Function to initialise the node object
+	def __init__(self, data):
+		self.data = data # Assign data
+		self.next = None # Initialize next as null
+
+
+# Linked List class contains a Node object
+class LinkedList:
+
+	# Function to initialize head
+	def __init__(self):
+		self.head = None
+
+	# This function prints contents of linked list
+	# starting from head
+	def printList(self):
+		temp = self.head
+		while (temp):
+			print(temp.data)
+			temp = temp.next
+
+
+# Code execution starts here
+if __name__ == '__main__':
+
+	# Start with the empty list
+	llist = LinkedList()
+
+	llist.head = Node(1)
+	second = Node(2)
+	third = Node(3)
+
+	llist.head.next = second # Link first node with second
+	second.next = third # Link second node with the third node
+
+	llist.printList()
