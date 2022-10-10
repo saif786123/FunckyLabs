@@ -1,16 +1,20 @@
-def rearrange(arr):
-    p = 0
-    b = 0
-    for i in range(len(arr)):
-        if b == 1:
-            b -= 1
-        elif arr[i] < 0:
-            arr[i], arr[p] = arr[p], arr[i]
-            if p > i:
-                b += 1
-            p += 2
-    return arr
+# Node class
+class Node:
 
+	# Function to initialize the
+	# node object
+	def __init__(self, data):
 
-array = [2, 3, -4, -1, 6, -9]
-print("After Rearranging :", rearrange(array))
+		# Assign data
+		self.data = data
+
+		# Initialize next as null
+		self.next = None
+
+# Linked List class
+class LinkedList:
+
+	# Function to initialize the
+	# Linked List object
+	def __init__(self):
+		self.head = None
