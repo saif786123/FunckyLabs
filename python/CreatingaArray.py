@@ -1,23 +1,23 @@
 # Python program to demonstrate
-# Creation of Array
+# accessing of element from list
 
-# importing "array" for array creations
+# importing array module
 import array as arr
 
-# creating an array with integer type
-a = arr.array('i', [1, 2, 3])
+# array with int type
+a = arr.array('i', [1, 2, 3, 4, 5, 6])
 
-# printing original array
-print("The new created array is : ", end=" ")
-for i in range(0, 3):
-    print(a[i], end=" ")
-print()
+# accessing element of array
+print("Access element is: ", a[0])
 
-# creating an array with double type
+# accessing element of array
+print("Access element is: ", a[3])
+
+# array with float type
 b = arr.array('d', [2.5, 3.2, 3.3])
 
-# printing original array
-print("The new created array is : ", end=" ")
-for i in range(0, 3):
-    print(b[i], end=" ")
+# accessing element of array
+print("Access element is: ", b[1])
 
+# accessing element of array
+print("Access element is: ", b[2])
