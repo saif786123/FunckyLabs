@@ -1,3 +1,4 @@
+
 # Python program to demonstrate
 # accessing of element from list
 
@@ -21,3 +22,4 @@ print("Access element is: ", b[1])
 
 # accessing element of array
 print("Access element is: ", b[2])
+
