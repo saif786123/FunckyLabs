@@ -1,15 +1,31 @@
-# Python program for
-# iterating over array
-import numpy as geek
+# Python 3.x code to demonstrate star pattern
 
-# creating an array using
-# arrange method
-a = geek.arange(9)
+# Function to demonstrate printing pattern triangle
+def triangle(n):
+    # number of spaces
+    k = n - 1
 
-# shape array with 3 rows
-# and 4 columns
-a = a.reshape(3, 3)
+    # outer loop to handle number of rows
+    for i in range(0, n):
 
-# iterating an array
-for x in geek.nditer(a):
-	print(x)
+        # inner loop to handle number spaces
+        # values changing acc. to requirement
+        for j in range(0, k):
+            print(end=" ")
+
+        # decrementing k after each loop
+        k = k - 1
+
+        # inner loop to handle number of columns
+        # values changing acc. to outer loop
+        for j in range(0, i + 1):
+            # printing stars
+            print("* ", end="")
+
+        # ending line after each row
+        print("\r")
+
+
+# Driver Code
+n = 5
+triangle(n)
