@@ -1,15 +1,19 @@
-# Python program for
-# iterating over array
-import numpy as geek
+# Function calculates the decimal equivalent
+# to given binary number
 
-# creating an array using
-# arrange method
-a = geek.arange(9)
+def binaryToDecimal(binary):
+    binary1 = binary
+    decimal, i, n = 0, 0, 0
+    while (binary != 0):
+        dec = binary % 10
+        decimal = decimal + dec * pow(2, i)
+        binary = binary // 10
+        i += 1
+    print(decimal)
 
-# shape array with 3 rows
-# and 4 columns
-a = a.reshape(3, 3)
 
-# iterating an array
-for x in geek.nditer(a):
-	print(x)
+# Driver code
+if __name__ == '__main__':
+    binaryToDecimal(100)
+    binaryToDecimal(101)
+    binaryToDecimal(1001)
