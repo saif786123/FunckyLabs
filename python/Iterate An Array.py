@@ -1,15 +1,27 @@
-# Python program for
-# iterating over array
-import numpy as geek
+class Node:
+   def __init__(self, dataval=None):
+      self.dataval = dataval
+      self.nextval = None
 
-# creating an array using
-# arrange method
-a = geek.arange(9)
+class SLinkedList:
+   def __init__(self):
+      self.headval = None
 
-# shape array with 3 rows
-# and 4 columns
-a = a.reshape(3, 3)
+   def listprint(self):
+      printval = self.headval
+      while printval is not None:
+         print (printval.dataval)
+         printval = printval.nextval
 
-# iterating an array
-for x in geek.nditer(a):
-	print(x)
+list = SLinkedList()
+list.headval = Node("Mon")
+e2 = Node("Tue")
+e3 = Node("Wed")
+
+# Link first Node to second node
+list.headval.nextval = e2
+
+# Link second Node to third node
+e2.nextval = e3
+
+list.listprint()
